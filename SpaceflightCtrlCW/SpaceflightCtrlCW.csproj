@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{388AD02C-C367-4868-8F6B-3C09A5CDE52B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SpaceflightCtrlCW</RootNamespace>
+    <AssemblyName>SpaceflightCtrlCW</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddMissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMissionForm.Designer.cs">
+      <DependentUpon>AddMissionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSpacecraftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSpacecraftForm.Designer.cs">
+      <DependentUpon>AddSpacecraftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddLaunchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddLaunchForm.Designer.cs">
+      <DependentUpon>AddLaunchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditMissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMissionForm.Designer.cs">
+      <DependentUpon>EditMissionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditLaunchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditLaunchForm.Designer.cs">
+      <DependentUpon>EditLaunchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSpacecraftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSpacecraftForm.Designer.cs">
+      <DependentUpon>EditSpacecraftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordPrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordPrintForm.Designer.cs">
+      <DependentUpon>WordPrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UselessQueries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UselessQueries.Designer.cs">
+      <DependentUpon>UselessQueries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpacecraftsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpacecraftsForm.Designer.cs">
+      <DependentUpon>SpacecraftsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaunchesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaunchesForm.Designer.cs">
+      <DependentUpon>LaunchesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MissionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MissionsForm.Designer.cs">
+      <DependentUpon>MissionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddMissionForm.resx">
+      <DependentUpon>AddMissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSpacecraftForm.resx">
+      <DependentUpon>AddSpacecraftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLaunchForm.resx">
+      <DependentUpon>AddLaunchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditLaunchForm.resx">
+      <DependentUpon>EditLaunchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMissionForm.resx">
+      <DependentUpon>EditMissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSpacecraftForm.resx">
+      <DependentUpon>EditSpacecraftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaunchesForm.resx">
+      <DependentUpon>LaunchesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MissionsForm.resx">
+      <DependentUpon>MissionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SpacecraftsForm.resx">
+      <DependentUpon>SpacecraftsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UselessQueries.resx">
+      <DependentUpon>UselessQueries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordPrintForm.resx">
+      <DependentUpon>WordPrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Снимок1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Снимок2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Снимок3.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
