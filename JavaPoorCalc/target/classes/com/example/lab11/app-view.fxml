@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="CENTER" prefHeight="293.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab11.CalcController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0ebc5" height="73.0" stroke="BLACK" strokeType="INSIDE" width="164.0" />
+                   <Text fx:id="outputField" textAlignment="CENTER" wrappingWidth="173.9999897480011" />
+               </children>
+            </StackPane>
+            <VBox prefHeight="186.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="200.0" spacing="4.0">
+                     <children>
+                        <ChoiceBox fx:id="NumeralSystemChoiceBox" prefHeight="26.0" prefWidth="80.0" />
+                        <ChoiceBox fx:id="ByteChoiceBox" prefWidth="80.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="154.0" prefWidth="159.0" spacing="3.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="154.0" prefWidth="30.0">
+                           <children>
+                              <Button fx:id="ButtonA" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="A" />
+                              <Button fx:id="ButtonB" layoutX="13.0" layoutY="70.0" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="B" />
+                              <Button fx:id="ButtonC" layoutX="13.0" layoutY="85.0" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="C" />
+                              <Button fx:id="ButtonD" layoutX="13.0" layoutY="40.0" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="D" />
+                              <Button fx:id="ButtonE" layoutX="13.0" layoutY="70.0" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="E" />
+                              <Button fx:id="ButtonF" layoutX="13.0" layoutY="100.0" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="F" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="154.0" prefWidth="130.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#unrealizedEvent" prefHeight="30.0" prefWidth="30.0" text="\%" />
+                                    <Button layoutX="60.0" layoutY="10.0" mnemonicParsing="false" onAction="#unrealizedEvent" prefHeight="30.0" prefWidth="30.0" text="1/x">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="44.0" layoutY="10.0" mnemonicParsing="false" onAction="#operatorPressed" prefHeight="30.0" prefWidth="30.0" text="√" />
+                                    <Button layoutX="76.0" layoutY="10.0" mnemonicParsing="false" onAction="#exportHistory" prefHeight="30.0" prefWidth="30.0" text="Save">
+                                       <font>
+                                          <Font size="8.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+                                 <children>
+                                    <Button fx:id="Button7" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="7" />
+                                    <Button fx:id="Button8" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="8" />
+                                    <Button fx:id="Button9" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="9" />
+                                    <Button mnemonicParsing="false" onAction="#operatorPressed" prefHeight="30.0" prefWidth="30.0" text="÷" />
+                                 </children>
+                              </HBox>
+
+                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+                                   <children>
+                                       <Button fx:id="Button4" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="4" />
+                                       <Button fx:id="Button5" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="5" />
+                                       <Button fx:id="Button6" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="6" />
+                                       <Button mnemonicParsing="false" onAction="#operatorPressed" prefHeight="30.0" prefWidth="30.0" text="×" />
+                                   </children>
+                               </HBox>
+
+                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+                                   <children>
+                                       <Button fx:id="Button1" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="1" />
+                                       <Button fx:id="Button2" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="2" />
+                                       <Button fx:id="Button3" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="3" />
+                                       <Button mnemonicParsing="false" onAction="#operatorPressed" prefHeight="30.0" prefWidth="30.0" text="-" />
+                                   </children>
+                               </HBox>
+
+                                     <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+                                   <children>
+                                       <Button fx:id="Button0" mnemonicParsing="false" onAction="#numPressed" prefHeight="30.0" prefWidth="30.0" text="0" />
+                                       <Button mnemonicParsing="false" onAction="#calculate" prefHeight="30.0" prefWidth="30.0" text="=">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button layoutX="125.0" layoutY="12.0" mnemonicParsing="false" onAction="#clear" prefHeight="30.0" prefWidth="30.0" text="CL" />
+                                    <Button layoutX="141.0" layoutY="12.0" mnemonicParsing="false" onAction="#operatorPressed" prefHeight="30.0" prefWidth="30.0" text="+" />
+                                   </children>
+                               </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <HBox.margin>
+            <Insets left="5.0" />
+         </HBox.margin>
+      </VBox>
+      <VBox alignment="BOTTOM_RIGHT" prefHeight="246.0" prefWidth="278.0" spacing="5.0">
+         <children>
+            <Label text="Выерите значение для вычисления">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin></Label>
+            <ChoiceBox fx:id="AutoleasingChoiceBox" prefHeight="17.0" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin></ChoiceBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="10.0" prefWidth="268.0" spacing="5.0">
+               <children>
+                  <Label text="Стоимость аренды">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <TextField fx:id="rentPrice" prefHeight="10.0" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="10.0" prefWidth="268.0" spacing="5.0">
+               <children>
+                  <Label text="Срок аренды">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <TextField fx:id="rentPeriod" prefHeight="10.0" prefWidth="150.0" />
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="170.0" prefHeight="10.0" prefWidth="268.0" spacing="5.0">
+               <children>
+                  <Label text="Годовые выплаты">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <TextField fx:id="annualPayments" prefHeight="10.0" prefWidth="150.0" />
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="154.0" prefHeight="10.0" prefWidth="268.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="105.0" text="Остаточная стоимость">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <TextField fx:id="residualValue" prefHeight="10.0" prefWidth="150.0" />
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="140.0" prefHeight="10.0" prefWidth="268.0" spacing="5.0">
+               <children>
+                  <Label text="Процентная ставка">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <TextField fx:id="interestRate" prefHeight="10.0" prefWidth="150.0" />
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="250.0" prefHeight="0.0" prefWidth="278.0" spacing="5.0">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#AutoleasingCalc" prefHeight="26.0" prefWidth="99.0" text="Вычислить" />
+                  <StackPane prefHeight="150.0" prefWidth="144.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0ebc5" height="48.0" stroke="BLACK" strokeType="INSIDE" width="171.0" />
+                        <Text fx:id="AutoleasingOutput" textAlignment="CENTER" wrappingWidth="169.9999896287918">
+                           <font>
+                              <Font size="10.0" />
+                           </font></Text>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</HBox>
